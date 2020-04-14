@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authors</title>
+</head>
+<body>
+    
+    <div>
+        
+    {% for book in books %}
+    <h3>  written by {{book.author.name}} </h3>
+            <p>{{book.name}}</p>
+        {% empty %}
+        No books found for  Author{{book.author.name}}
+    {% endfor %}
+ 
+    </div>
+</body>
+</html>

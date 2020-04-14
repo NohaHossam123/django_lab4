@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>every book</title>
+</head>
+    <body>
+        
+        <div>
+            <h1> book details</h1>
+            <li>{{book.title}}</li>
+            <li>Author is <a href="{% url 'author' book.author_id %}">{{book.author.name}}</a></li>
+            <br>
+            {% load static %}
+            <img src= "{% static 'images/'%}{{ book.image }}" style="width:300px; height: 300px; ;">
+        </div>
+    </body>
+</html>
